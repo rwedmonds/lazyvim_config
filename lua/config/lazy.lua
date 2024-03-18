@@ -10,6 +10,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+
     -- import any extras modules here
     { "kdheepak/lazygit.nvim", dependencies = {
       "nvim-lua/plenary.nvim",
@@ -22,9 +23,7 @@ require("lazy").setup({
       version = "*", -- Use for stability; omit to use `main` branch for the latest features
       event = "VeryLazy",
       config = function()
-        require("nvim-surround").setup({
-          -- Configuration here, or leave empty to use defaults
-        })
+        require("nvim-surround").setup()
       end,
     },
     -- cellular automaton
