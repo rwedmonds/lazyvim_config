@@ -54,7 +54,7 @@ map("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 map("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 ---------------------------------------
---         Floating Temenal          --
+--         Floating Terminal         --
 ---------------------------------------
 local lazyterm = function()
   Util.terminal(nil, { cwd = Util.root() })
