@@ -13,7 +13,7 @@ Added **alpha.lua** for custom logo at home screen (pictured above)
 
 ### colorscheme.lua
 
-Added **colorscheme.lua** to enable Dracula colorscheme from [Mofiqul/dracula](#https://github.com/Mofiqul/dracula.nvim)
+Added **colorscheme.lua** to enable different themes
 
 ### disabled.lua
 
