@@ -165,5 +165,4 @@ added config for winbar
 4. `c` followed by text you want to replace with 
 5. Esc to exit and replace in entire selection
 
-![block replacement](https://github.com/redmonds/lazyvim_config/data/block_replacement.gif)
-
+![block replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
