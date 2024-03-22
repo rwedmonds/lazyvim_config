@@ -157,6 +157,8 @@ added config for winbar
 5. Type text you want (It will appear only on first line)
 6. Hit Esc (Text will appear on all other lines)
 
+![block insert](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_insert.gif)
+
 ### Block Replacement
 
 1. Put cursor over first letter you want to replace 
