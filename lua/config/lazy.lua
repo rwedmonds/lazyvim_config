@@ -17,6 +17,14 @@ require("lazy").setup({
     } },
     -- nvim-biscuits
     { "code-biscuits/nvim-biscuits" },
+    {
+      "MeanderingProgrammer/markdown.nvim",
+      name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
+      config = function()
+        require("render-markdown").setup({})
+      end,
+    },
     -- nvim-surround
     {
       "kylechui/nvim-surround",

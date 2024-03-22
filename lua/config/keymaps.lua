@@ -17,7 +17,7 @@ local opt = vim.opt
 ---------------------------------------
 
 map("n", "I", "H") -- move to top of screen
-map("n", "E", "L") -- move to top of screen
+map("n", "E", "L") -- move to bottom of screen
 
 -- colemak keyboard layout movement keys
 map("n", "<leader>n", "<C-w>h") -- move to window left
