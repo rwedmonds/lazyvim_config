@@ -31,6 +31,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [Block Insert](#block-insert)
 - [Block Replacemen](#block-replacement)
 - [Global Search and Replace](#global-search-and-replace)
+- [Using mini.surround](#using-minisurround)
 
 ## Installation
 
