@@ -123,7 +123,7 @@ added config for winbar
 
 | Mode | Plugin | Keybind | Definition |
 | - | - | - | - |
-| Normal | Cellular Automation | \<leader\> `fm`l | Make it rain |
+| Normal | Cellular Automation | \<leader\> `fml` | Make it rain |
 | Normal | Neotree | \<leader\> `tt` | Toggle Neotree |
 | Normal | Telescope | \<leader\> `ff` | Find files |
 | Normal | Telescope | \<leader\> `fs` | Find string (grep) in current working directory as you type |
@@ -154,6 +154,8 @@ added config for winbar
 | Insert | **CTRL**-`o` | Enter a Normal mode command while in insert mode |
 | Normal | `gg` `=` `G` | Properly indent entire file |
 
+## A Few Vim Tips and Tricks
+
 ### Block Insert
 
 1. Put cursor where yoy want text (Text will go AFTER the cursor)
@@ -167,10 +169,18 @@ added config for winbar
 
 ### Block Replacement
 
-1. Put cursor over first letter you want to replace
+  1. Put cursor over first letter you want to replace
 2. **CTRL**-`v` to enter block select mode
 3. Select block using movement keys
 4. `c` followed by text you want to replace with
 5. **Esc** to exit and replace in entire selection
 
 ![block replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
+
+### Global Search and Replace 
+
+- Replace `foo` with `bar` across the entire file
+
+  `:%s/foo/bar`
+
+
