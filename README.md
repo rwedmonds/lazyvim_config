@@ -191,10 +191,10 @@ added config for winbar
 
 ### Block Insert
 
-1. Put cursor where yoy want text (Text will go AFTER the cursor)
+1. Put cursor where yoy want text (Text will appear to the right of cursor position)
 2. **CTRL**-`v` to enter block select mode
 3. Select block using movement keys
-4. **SHIFT**-`a` to enter insert mode
+4. Type `:normal i<insertion text>`
 5. Type text you want (It will appear only on first line)
 6. Hit Esc (Text will appear on all other lines)
 
