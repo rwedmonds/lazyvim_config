@@ -181,6 +181,6 @@ added config for winbar
 
 - Replace `foo` with `bar` across the entire file
 
-  `:%s/foo/bar`
+  `:%s/foo/bar/g`
 
 
