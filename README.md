@@ -3,7 +3,7 @@
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-![alt text](<nvim_screenshot.png>)
+![alt text](<data/nvim_screenshot.png>)
 
 ## My Changes
 
