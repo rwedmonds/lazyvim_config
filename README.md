@@ -78,8 +78,8 @@ added config for winbar
 
 | Mode | Keymap | Definition |
 | - | - | - |
-| Normal | `di` (`"`, `'`, `(`, `{`, `[`, `|`) | Delete everything between the indicated characters |
-| Normal | `yi` (`"`, `'`, `(`, `{`, `[`, `|`) | Copy (yank) everything between the indicated characters |
+| Normal | `di` (`"`, `'`, `(`, `{`, `[`, `\|`) | Delete everything between the indicated characters |
+| Normal | `yi` (`"`, `'`, `(`, `{`, `[`, `\|`) | Copy (yank) everything between the indicated characters |
 | Normal | `dG` | Delete to the end of the document |
 | Normal | `dgg` | Delete to the beginning of the document |
 | Normal | `dw` | Delete to the end of the current word |
