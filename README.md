@@ -31,33 +31,39 @@ This whole file is customized to work:
 Loaded plugins in the "extra modules section"
 
 ```sh
--- add lazyvim and import its plugins
-{ "lazyvim/lazyvim", import = "lazyvim.plugins" },
+   -- import any extras modules here
+    { "kdheepak/lazygit.nvim", dependencies = {
+      "nvim-lua/plenary.nvim",
+    } },
+    -- nvim-biscuits
+    { "code-biscuits/nvim-biscuits" },
+    {
+      "MeanderingProgrammer/markdown.nvim",
+      name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+      dependencies = { "nvim-treesitter/nvim-treesitter" },
+      config = function()
+        require("render-markdown").setup({})
+      end,
+    },
+    -- nvim-surround
+    {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup()
+      end,
+    },
+    -- cellular automaton
+    { "eandrju/cellular-automaton.nvim" },
+    -- colorizer
+    { "norcalli/nvim-colorizer.lua" },
+    { "folke/twilight.nvim" },
+    -- { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+    -- import/override with your plugins
+    { import = "plugins" },
 
--- import any extras modules here
-{ "kdheepak/lazygit.nvim", dependencies = {
-"nvim-lua/plenary.nvim",
-} },
--- nvim-biscuits
-{ "code-biscuits/nvim-biscuits" },
--- nvim-surround
-{
-nihbdsrtqa cyuv``
-"kylechui/nvim-surround",
-version = | use for stability; omit to use `main` branch for the latest features
-event = "verylazy",
-config = function()
-require("nvim-surround |.setup()
-end,
-},
--- cellular automaton
-{ "eandrju/cellular-automaton.nvim" },
--- colorizer
-{ "norcalli/nvim-colorizer.lua" },
-{ "folke/twilight.nvim" },
--- { import = "lazyvim.plugins.extras.lang.typescript" },
-{ import = "lazyvim.plugins.extras.lang.json" },
--- import/override with your plugins
 ```
 
 ### options.lua
