@@ -5,6 +5,32 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ![alt text](<data/nvim_screenshot.png>)
 
+## Table of Contents
+
+[My Changes](#my-changes)
+
+- [alpha.lua](#alphalua)
+- [colorscheme.lua](#colorschemelua)
+- [disabled.lua](#disabledlua)
+- [keymaps.lua](#keymapslua)
+- [lazy.lua](#lazy.lua)
+- [options.lua](#options.lua)
+
+[Keymaps and Keyboard Shortcuts](#keymaps-and-keyboard-shortcuts)
+
+- [Editing](#editing)
+- [Movement](#movement)
+- [Window Management](#window-management)
+- [Plugin Keybinds](#plugin-keybinds)
+- [Miscellaneous](#miscellaneous)
+
+[A Few NeoVim Tips and Tricks](#a-few-neovim-tips-and-tricks)
+
+- [Block Insert](#block-insert)
+- [Block Replacemen](#block-replacement)
+- [Global Search and Replace](#global-search-and-replace)
+  
+
 ## My Changes
 
 ### alpha.lua
@@ -70,7 +96,7 @@ Loaded plugins in the "extra modules section"
 
 added config for winbar
 
-## keymaps and keyboard shortcuts
+## Keymaps and Keyboard Shortcuts
 
 !!!note The leader key is `space`
 
@@ -154,7 +180,7 @@ added config for winbar
 | Insert | **CTRL**-`o` | Enter a Normal mode command while in insert mode |
 | Normal | `gg` `=` `G` | Properly indent entire file |
 
-## A Few Vim Tips and Tricks
+## A Few NeoVim Tips and Tricks
 
 ### Block Insert
 
