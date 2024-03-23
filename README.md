@@ -29,7 +29,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 [A Few NeoVim Tips and Tricks](#a-few-neovim-tips-and-tricks)
 
 - [Block Insert](#block-insert)
-- [Block Replacemen](#block-replacement)
+- [Block Replacement](#block-replacement)
 - [Global Search and Replace](#global-search-and-replace)
 - [Using mini.surround](#using-minisurround)
 
