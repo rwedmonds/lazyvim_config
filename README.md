@@ -78,8 +78,8 @@ added config for winbar
 
 | Mode | Keymap | Definition |
 | - | - | - |
-| Normal | `di` (", ', (, {, [, \|) | Delete everything between the indicated characters |
-| Normal | `yi` (", ', (, {, [, \|) | Copy (yank) everything between the indicated characters |
+| Normal | `di` (`"`, `'`, `(`, `{`, `[`, `|`) | Delete everything between the indicated characters |
+| Normal | `yi` (`"`, `'`, `(`, `{`, `[`, `|`) | Copy (yank) everything between the indicated characters |
 | Normal | `dG` | Delete to the end of the document |
 | Normal | `dgg` | Delete to the beginning of the document |
 | Normal | `dw` | Delete to the end of the current word |
@@ -159,7 +159,7 @@ added config for winbar
 1. Put cursor where yoy want text (Text will go AFTER the cursor)
 2. **CTRL**-`v` to enter block select mode
 3. Select block using movement keys
-4. SHIFT-a to enter insert mode
+4. **SHIFT**-`a` to enter insert mode
 5. Type text you want (It will appear only on first line)
 6. Hit Esc (Text will appear on all other lines)
 
@@ -171,6 +171,6 @@ added config for winbar
 2. **CTRL**-`v` to enter block select mode
 3. Select block using movement keys
 4. `c` followed by text you want to replace with
-5. Esc to exit and replace in entire selection
+5. **Esc** to exit and replace in entire selection
 
 ![block replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
