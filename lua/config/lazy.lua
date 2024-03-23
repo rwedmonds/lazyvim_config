@@ -25,15 +25,8 @@ require("lazy").setup({
         require("render-markdown").setup({})
       end,
     },
-    -- nvim-surround
-    {
-      "kylechui/nvim-surround",
-      version = "*", -- Use for stability; omit to use `main` branch for the latest features
-      event = "VeryLazy",
-      config = function()
-        require("nvim-surround").setup()
-      end,
-    },
+    -- mini-surround
+    { "echasnovski/mini.surround", version = "*" },
     -- cellular automaton
     { "eandrju/cellular-automaton.nvim" },
     -- colorizer

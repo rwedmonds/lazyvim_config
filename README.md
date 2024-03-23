@@ -7,6 +7,8 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Table of Contents
 
+[Installation](#installation)
+
 [My Changes](#my-changes)
 
 - [alpha.lua](#alphalua)
@@ -29,7 +31,10 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [Block Insert](#block-insert)
 - [Block Replacemen](#block-replacement)
 - [Global Search and Replace](#global-search-and-replace)
-  
+
+## Installation
+
+This is just [LazyVim](https://www.lazyvim.org/) with [my changes](#my-changes) to suit my tastes and work with the [Colemak](https://colemak.com/) keyboard layout. Follow the installation instructions at lazyvim.org and, if Colemak is your chosen layout, use the keymaps [here](https://github.com/rwedmonds/lazyvim_config/blob/main/lua/config/keymaps.lua). 
 
 ## My Changes
 
@@ -49,7 +54,7 @@ Added **disabled.lua** to disable the nvim-notify plugin because it makes NeoVim
 
 This whole file is customized to work:
 
-1. With the Colemak keyboard layout
+1. With the [Colemak](https://colemak.com) keyboard layout
 2. With my preferences
 
 ### lazy.lua
@@ -60,7 +65,8 @@ Loaded plugins in the "extra modules section"
    -- import any extras modules here
     { "kdheepak/lazygit.nvim", dependencies = {
       "nvim-lua/plenary.nvim",
-    } },
+      } 
+    },
     -- nvim-biscuits
     { "code-biscuits/nvim-biscuits" },
     {
@@ -209,4 +215,26 @@ added config for winbar
 
   `:%s/foo/bar/g`
 
+### Using [ mini.surround ](https://github.com/echasnovski/mini.surround)
+
+Actions (all of them are dot-repeatable out of the box and respect `v:count` for searching surrounding) with configurable keymappings:
+
+- Add surrounding with `sa` (in visual mode or on motion).
+- Delete surrounding with `sd`.
+- Replace surrounding with `sr`.
+- Find surrounding with `sf` or `sF` (move cursor right or left).
+- Highlight surrounding with `sh`.
+- Change number of neighbor lines with `sn` (see |MiniSurround-algorithm|).
+
+Surrounding is identified by a single character as both "input" (in `delete` and `replace` start, `find`, and `highlight`) and "output" (in `add` and `replace` end):
+
+- f - function call (tring of alphanumeric symbols or '_' or '.' followed by balanced '()'). In "input" finds function call, in "output" prompts user to enter function name.
+- 't' - tag. In "input" finds tag with same identifier, in "output" prompts user to enter tag name.
+- All symbols in brackets '()', '[]', '{}', '<>". In "input' represents balanced brackets (open - with whitespace pad, close - without), in "output" - left and right parts of brackets.
+- '?' - interactive. Prompts user to enter left and right parts.
+- All other alphanumeric, punctuation, or space characters represent surrounding with identical left and right parts.
+
+Configurable search methods to find not only covering but possibly next, previous, or nearest surrounding. See more in help for `MiniSurround.config`.
+
+All actions involving finding surrounding (delete, replace, find, highlight) can be used with suffix that changes search method to find previous/last. See more in help for `MiniSurround.config`.
 
