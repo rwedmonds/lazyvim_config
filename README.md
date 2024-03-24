@@ -116,11 +116,12 @@ added config for winbar
 | Normal | `dG` | Delete to the end of the document |
 | Normal | `dgg` | Delete to the beginning of the document |
 | Normal | `dw` | Delete to the end of the current word |
-| Insert | **CTRL**-`w` | Delete the previous word (or to the beginning of the current word) |
-| Insert | **CTRL**-`u` | Delete to the beginning of the line |
 | Normal | `d%` | Delete everything between (, {, [ |
 | Normal | `cf<character>` | Delete everything up to an including the next <character> (substitute with nothing) |
 | Normal | `cF<character>` | Delete everything back to an including the previous <character> (substitute with nothing) |
+| Normal | `x` | Delete the character under the cursor without copying int register
+| Insert | **CTRL**-`w` | Delete the previous word (or to the beginning of the current word) |
+| Insert | **CTRL**-`u` | Delete to the beginning of the line |
 
 ### Selections
 
@@ -129,7 +130,6 @@ added config for winbar
 | Normal | `viw` | Select the current word |
 | Normal | `vi` + `"`, `(`, `[`, etc. | Select everything between the quotes, patentheses, brackets, etc. excluding the quotes, etc. |
 | Normal | `via` + `"`, `(`, `[`, etc. | Select everything between the quotes, patentheses, brackets, etc. including the quotes, etc. |
-
 
 ### Movement
 
@@ -144,9 +144,9 @@ added config for winbar
 | Normal | \<leader\> `o` | Move to window right |
 | Normal | \<leader\> `e` | Move to window down |
 | Normal | \<leader\> `i` | Move to window up |
+| Normal | `%` | Jump to matching (, {, [ |
 | Normal/Insert/Visual | **Opt**-`e` | move line down |
 | Normal/Insert/Visual | **Opt**-`i` | move line up |
-| Normal | `%` | Jump to matching (, {, [ |
 
 ### Window Management
 
@@ -156,7 +156,7 @@ added config for winbar
 | Normal | **CTRL**-`e` | Decrease window height
 | Normal | **CTRL**-`o` | Increase window width
 | Normal | **CTRL**-`n` | Decrease window width
-| Normal | \<leader\> `s\`| | Split window vertically
+| Normal | \<leader\> `s|` | Split window vertically
 | Normal | \<leader\> `s-` | Split window horizontally
 | Normal | \<leader\> `se` | Make split windows equal width & height
 | Normal | \<leader\> `sx` | Close current split window
@@ -186,19 +186,18 @@ added config for winbar
 
 | Mode | Keymap | Definition |
 | - | - | - |
-| Insert | `jj` | ESC (Exit insert mode) |
 | Normal | \<leader\> `w` | Write |
 | Normal | \<leader\> `q` | Quit |
 | Normal | \<leader\> `wa` | Write all and quit |
 | Normal | \<leader\> `qq` | Quit all |
 | Normal | \<leader\> `hh` | Clear search highlights |
-| Normal | `x` | Delete the character under the cursor without copying int register
-| Visual | `<` | Decrease indent |
-| Visual | `>` | Increase indent |
 | Normal | \<leader\> `+` | Increment number |
 | Normal | \<leader\> `-` | Decrement number |
-| Insert | **CTRL**-`o` | Enter a Normal mode command while in insert mode |
 | Normal | `gg` `=` `G` | Properly indent entire file |
+| Insert | **CTRL**-`o` | Enter a Normal mode command while in insert mode |
+| Insert | `jj` | ESC (Exit insert mode) |
+| Visual | `>` | Increase indent |
+| Visual | `<` | Decrease indent |
 
 ## A Few NeoVim Tips and Tricks
 
@@ -232,7 +231,7 @@ added config for winbar
 
 [Block Replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
 
-### Global Search and Replace 
+### Global Search and Replace
 
 - Replace `foo` with `bar` across the entire file
 
@@ -272,5 +271,3 @@ Surrounding is identified by a single character as both "input" (in `delete` and
 Configurable search methods to find not only covering but possibly next, previous, or nearest surrounding. See more in help for `MiniSurround.config`.
 
 All actions involving finding surrounding (delete, replace, find, highlight) can be used with suffix that changes search method to find previous/last. See more in help for `MiniSurround.config`.
-
-
