@@ -118,6 +118,18 @@ added config for winbar
 | Normal | `dw` | Delete to the end of the current word |
 | Insert | **CTRL**-`w` | Delete the previous word (or to the beginning of the current word) |
 | Insert | **CTRL**-`u` | Delete to the beginning of the line |
+| Normal | `d%` | Delete everything between (, {, [ |
+| Normal | `cf<character>` | Delete everything up to an including the next <character> (substitute with nothing) |
+| Normal | `cF<character>` | Delete everything back to an including the previous <character> (substitute with nothing) |
+
+### Selections
+
+| Mode | Keymap | Definition |
+| - | - | - |
+| Normal | `viw` | Select the current word |
+| Normal | `vi` + `"`, `(`, `[`, etc. | Select everything between the quotes, patentheses, brackets, etc. excluding the quotes, etc. |
+| Normal | `via` + `"`, `(`, `[`, etc. | Select everything between the quotes, patentheses, brackets, etc. including the quotes, etc. |
+
 
 ### Movement
 
@@ -134,6 +146,7 @@ added config for winbar
 | Normal | \<leader\> `i` | Move to window up |
 | Normal/Insert/Visual | **Opt**-`e` | move line down |
 | Normal/Insert/Visual | **Opt**-`i` | move line up |
+| Normal | `%` | Jump to matching (, {, [ |
 
 ### Window Management
 
@@ -189,6 +202,15 @@ added config for winbar
 
 ## A Few NeoVim Tips and Tricks
 
+### Selection Tips
+
+- Enter Visual Mode by typing `v` while in Normal Mode
+- Enter Visual Block Mode with **CTRL**-`v`
+- Reverse the direction of your selection while in Visual or Visual Block modes by typing `o`
+- Generally, `i` will be used to insert text and `c` will be used to replace it
+
+[Reverse Directions](./data/reverse_selection.gif)
+
 ### Block Insert
 
 1. Put cursor where yoy want text (Text will appear to the right of cursor position)
@@ -198,7 +220,7 @@ added config for winbar
 5. Type text you want (It will appear only on first line)
 6. Hit Esc (Text will appear on all other lines)
 
-![block insert](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_insert.gif)
+[Block Insert](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_insert.gif)
 
 ### Block Replacement
 
@@ -208,13 +230,25 @@ added config for winbar
 4. `c` followed by text you want to replace with
 5. **Esc** to exit and replace in entire selection
 
-![block replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
+[Block Replacement](https://github.com/rwedmonds/lazyvim_config/blob/main/data/block_replacement.gif)
 
 ### Global Search and Replace 
 
 - Replace `foo` with `bar` across the entire file
 
   `:%s/foo/bar/g`
+
+### Insert text at the beginning of lines
+
+1. Use **CTRL**`v` to enter Visual Block Mode and select lines where you want to insert text
+2. Type **SHIFT-`I` to enter Insert mode
+3. Type the text you want to insert and hit **Esc**
+
+### Append text to the end of lines
+
+1. Use **CTRL**-`v` to enter Visual Block Mode and select the block of text you want to append
+2. Type **SHIFT**-`A` to enter Append mode
+3. Type the text you want to append ans hit **Esc**
 
 ### Using [ mini.surround ](https://github.com/echasnovski/mini.surround)
 
@@ -238,4 +272,5 @@ Surrounding is identified by a single character as both "input" (in `delete` and
 Configurable search methods to find not only covering but possibly next, previous, or nearest surrounding. See more in help for `MiniSurround.config`.
 
 All actions involving finding surrounding (delete, replace, find, highlight) can be used with suffix that changes search method to find previous/last. See more in help for `MiniSurround.config`.
+
 

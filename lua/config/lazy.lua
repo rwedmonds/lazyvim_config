@@ -15,8 +15,6 @@ require("lazy").setup({
     { "kdheepak/lazygit.nvim", dependencies = {
       "nvim-lua/plenary.nvim",
     } },
-    -- nvim-biscuits
-    { "code-biscuits/nvim-biscuits" },
     {
       "MeanderingProgrammer/markdown.nvim",
       name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
@@ -25,6 +23,7 @@ require("lazy").setup({
         require("render-markdown").setup({})
       end,
     },
+    { "declancm/maximize.nvim" },
     -- mini-surround
     { "echasnovski/mini.surround", version = "*" },
     -- cellular automaton

@@ -43,6 +43,9 @@ map("n", "<C-e>", "<cmd>resize -2<cr>", { desc = "Decrease window height" })
 map("n", "<C-n>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 map("n", "<C-o>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
+-- Toggle maximizing the current tab
+map("n", "<Leader>z", "<Cmd>lua require('maximize').toggle()<CR>")
+
 map("n", "<leader>s|", "<C-w>v") -- split window vertically
 map("n", "<leader>s-", "<C-w>s") -- split window horizontally
 map("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
