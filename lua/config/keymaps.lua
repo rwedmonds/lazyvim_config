@@ -34,7 +34,7 @@ map("v", "<A-e>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<A-i>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 ---------------------------------------
---        Window Management          --
+--        Window management          --
 ---------------------------------------
 
 -- Resize window using <ctrl> arrow keys
@@ -63,7 +63,7 @@ local lazyterm = function()
   Util.terminal(nil, { cwd = Util.root() })
 end
 map("n", "<leader>ft", lazyterm, { desc = "Terminal (root dir)" })
-map("n", "<leader>fT", function()
+map("n", "<leader>ft", function()
   Util.terminal()
 end, { desc = "Terminal (cwd)" })
 map("n", "<c-/>", lazyterm, { desc = "Terminal (root dir)" })
@@ -75,7 +75,7 @@ map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- use j and jj to enter and exit insert mode
 -- map("n", "j", "i")
-map("i", "jj", "<ESC>")
+map("i", "jj", "<esc>")
 
 -- write and quit
 map("n", "<leader>w", ":w<CR>")
@@ -103,7 +103,7 @@ map("n", "<leader>lw", function()
 end, { desc = "Toggle Line Wrapping" })
 
 ---------------------------------------
---          Plugin Keybinds          --
+--          Plugin keybinds          --
 ---------------------------------------
 -- cellular automaton
 map("n", "<leader>fml", ":CellularAutomaton make_it_rain<CR>")
@@ -111,10 +111,8 @@ map("n", "<leader>fml", ":CellularAutomaton make_it_rain<CR>")
 -- lazygit
 map("n", "<leader>lg", ":LazyGit<CR>")
 
--- markdown preview
-map("n", "<leader>mt", "<Plug>MarkdownPreview")
-map("n", "<leader>ms", "<Plug>MarkdownPreviewStop")
-map("n", "<leader>mp", "<Plug>MarkdownPreviewToggle")
+-- multicursors
+map("n", "<leader>m", ":MCstart<CR>")
 
 -- neotree
 map("n", "<leader>tt", ":Neotree toggle<CR>")

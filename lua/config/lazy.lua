@@ -11,10 +11,33 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- import any extras modules here
+    -------------------------------------------------------
+    --        import any extras modules here             --
+    -------------------------------------------------------
+
+    -- LazyGit
     { "kdheepak/lazygit.nvim", dependencies = {
       "nvim-lua/plenary.nvim",
     } },
+    -- Multicursors
+    {
+      "smoka7/multicursors.nvim",
+      event = "VeryLazy",
+      dependencies = {
+          'smoka7/hydra.nvim',
+      },
+      opts = {},
+      cmd = { 'MCstart', 'MCvisual', 'MCclear', 'MCpattern', 'MCvisualPattern', 'MCunderCursor' },
+      keys = {
+              {
+                  mode = { 'v', 'n' },
+                  '<Leader>m',
+                  '<cmd>MCstart<cr>',
+                  desc = 'Create a selection for selected text or word under the cursor',
+              },
+          },
+  },
+    -- Markdown Preview
     {
       "MeanderingProgrammer/markdown.nvim",
       name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
@@ -23,6 +46,7 @@ require("lazy").setup({
         require("render-markdown").setup({})
       end,
     },
+    -- Mazximize
     { "declancm/maximize.nvim" },
     -- mini-surround
     { "echasnovski/mini.surround", version = "*" },
