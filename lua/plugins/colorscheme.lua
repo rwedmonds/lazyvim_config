@@ -10,12 +10,18 @@ return {
   --   },
   -- },
   -- add catppuccin mocha
-  { "catppuccin/nvim", name = "catppuccin-macchiato", priority = 1000 },
-
+  -- { "catppuccin/nvim", name = "catppuccin-macchiato", priority = 1000 },
+  --
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "catppuccin-macchiato",
+  --   },
+  -- },
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin-macchiato",
-    },
+    "eldritch-theme/eldritch.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
 }
